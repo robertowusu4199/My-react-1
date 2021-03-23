@@ -1,25 +1,41 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+/*create an arrow function
+
+const App = () =>{
+
+  return <WelcomeComponent/>
+
 }
+
+//new component
+
+const WelcomeComponent = () =>{
+
+  return <h1>"Codetrain is awesome, react works!!!"</h1>
+
+}*/
+
+
+//*updating and replacing week 2 project to use state 
+
+
+class App extends React.Component {
+
+  state = {
+    updating: "Codetrain is awesome, react works!!!"
+  }
+
+  render(){
+    return(
+      <h1> {this.state.updating} </h1>
+    )
+  }
+}
+
+
 
 export default App;
